@@ -1,33 +1,37 @@
 button a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 ul {
-    margin: 30px;
+  margin: 30px;
 }
 
 li {
-    border: 1px solid darkgray;
-    list-style-type: none;
-    text-align: left;
-    padding: 15px 50px 15px 50px;
+  border: 1px solid darkgray;
+  list-style-type: none;
+  text-align: left;
+  padding: 15px 50px 15px 50px;
 }
 
 h3 {
-    font-size:medium;
+  font-size: medium;
 }
 
 h2 {
-    color: navy;
+  color: navy;
 }
 
 .editIcon {
-    color: black;
-    font-size: large;
-    
+  color: black;
+  font-size: large;
 }
 
 .editIcon:hover {
-        color: red;
-    }
+  color: red;
+}
+
+.transparentButton {
+  background: transparent;
+  border: none;
+}

@@ -2,12 +2,24 @@ export const initialStore=()=>{
   return{
     // fname: "Sean",
     // lname: "Hammond",
+    
+    // Variables I made to try to work with editing and updating both on the same CreateContact page. This didn't work, and I'm making separate pages now, but deleting the variables now will likely mess up the code, so I'm leaving them here.
     indexOfContactToEdit: 0,
     nameToEdit: "",
     addressToEdit: "",
     phoneToEdit: "",
     emailToEdit: "",
+
+    // Variables to work with the UpdateContact page:
+    contactToEdit: {
+        name: "user5",
+        phone: "phone5",
+        email: "email5",
+        address: "address5",
+    }
+
     baseURL: "https://playground.4geeks.com/contact",
+
   }
 }
 

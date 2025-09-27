@@ -114,8 +114,9 @@ export const Home = () => {
                   {" " + contactData.name}
                 </span>
                 <span className="col-1">
-                  <Link to="/createcontact">
-                  <i
+                  <Link to="/updateContact">
+                  <button className="transparentButton">
+                    <i
                     className="fa-solid fa-pencil editIcon"
                     onClick={() => {
                       dispatch({
@@ -140,10 +141,12 @@ export const Home = () => {
                       });
                     }}
                   ></i>
+                  </button>
                   </Link>
                 </span>
                 <span className="col-1">
-                  <i
+                  <button className="transparentButton">
+                    <i
                     className="fa-solid fa-trash-can editIcon"
                     onClick={() => {
                       contactList.length == 1 && createDemoContacts();
@@ -151,6 +154,7 @@ export const Home = () => {
                       window.location.reload();
                     }}
                   ></i>
+                  </button>
                 </span>
               </h2>
               <h3>
