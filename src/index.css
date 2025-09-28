@@ -31,6 +31,10 @@ h2 {
   color: red;
 }
 
+.btn {
+  margin: 10px;
+}
+
 .transparentButton {
   background: transparent;
   border: none;

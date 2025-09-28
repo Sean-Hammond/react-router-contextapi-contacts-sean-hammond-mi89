@@ -5,10 +5,14 @@ import { Link } from "react-router-dom";
 export const CreateContact = () => {
   const { store, dispatch } = useGlobalReducer();
 
-  const [newContactFullName, setNewContactFullName] = useState(store.nameToEdit);
+  const [newContactFullName, setNewContactFullName] = useState(
+    store.nameToEdit
+  );
   const [newContactEmail, setNewContactEmail] = useState(store.emailToEdit);
   const [newContactPhone, setNewContactPhone] = useState(store.phoneToEdit);
-  const [newContactAddress, setNewContactAddress] = useState(store.addressToEdit);
+  const [newContactAddress, setNewContactAddress] = useState(
+    store.addressToEdit
+  );
 
   const createContacts = () => {
     setNewContactFullName("");
@@ -116,7 +120,9 @@ export const CreateContact = () => {
       </button>
       <br />
 
-      <Link to="/">Back to contact list</Link>
+      <button className="btn btn-info btn-sm">
+        <Link to="/"><i class="fa-solid fa-hand-point-left"></i> Back to contact list</Link>
+      </button>
     </div>
   );
 };
