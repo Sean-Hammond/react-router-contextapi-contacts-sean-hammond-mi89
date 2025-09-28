@@ -115,24 +115,22 @@ export const Home = () => {
                 </span>
                 <span className="col-1">
                   <Link to="/changecontact">
-                  <button className="transparentButton">
-                    {/* <i
-                    className="fa-solid fa-pencil editIcon"
-                  ></i> */}
-                    Edit
-                  </button>
+                    <button className="transparentButton">
+                      <i className="fa-solid fa-pencil editIcon"></i>
+                    </button>
                   </Link>
+                  
                 </span>
                 <span className="col-1">
                   <button className="transparentButton">
                     <i
-                    className="fa-solid fa-trash-can editIcon"
-                    onClick={() => {
-                      contactList.length == 1 && createDemoContacts();
-                      deleteContact(contactData.id);
-                      window.location.reload();
-                    }}
-                  ></i>
+                      className="fa-solid fa-trash-can editIcon"
+                      onClick={() => {
+                        contactList.length == 1 && createDemoContacts();
+                        deleteContact(contactData.id);
+                        window.location.reload();
+                      }}
+                    ></i>
                   </button>
                 </span>
               </h2>

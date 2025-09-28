@@ -10,12 +10,20 @@ export const initialStore = () => {
     phoneToEdit: "",
     emailToEdit: "",
 
-    // Variables to work with the UpdateContact page:
+    // Variable to work with the UpdateContact page:
     contactToEdit: {
       name: "user5",
       phone: "phone5",
       email: "email5",
       address: "address5",
+    },
+
+    //Variable for Changecontact page:
+    contactToChange: {
+      "name": "Sean",
+      "phone": "999",
+      "email": "eee",
+      "address": "aaa",
     },
 
     baseURL: "https://playground.4geeks.com/contact",
