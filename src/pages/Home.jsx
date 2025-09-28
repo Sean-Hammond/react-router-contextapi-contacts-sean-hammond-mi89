@@ -75,18 +75,18 @@ export const Home = () => {
       });
   };
 
-  const putContacts = () => {
-    let options = {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        name: "user5",
-        phone: "phone5",
-        email: "email5",
-        address: "address5",
-      }),
-    };
-  };
+  // const putContacts = () => {
+  //   let options = {
+  //     method: "PUT",
+  //     headers: { "content-type": "application/json" },
+  //     body: JSON.stringify({
+  //       name: "user5",
+  //       phone: "phone5",
+  //       email: "email5",
+  //       address: "address5",
+  //     }),
+  //   };
+  // };
 
   useEffect(
     () => {
@@ -114,33 +114,12 @@ export const Home = () => {
                   {" " + contactData.name}
                 </span>
                 <span className="col-1">
-                  <Link to="/updateContact">
+                  <Link to="/changecontact">
                   <button className="transparentButton">
-                    <i
+                    {/* <i
                     className="fa-solid fa-pencil editIcon"
-                    onClick={() => {
-                      dispatch({
-                        type: "set-indexOfContactToEdit",
-                        payload: contactList.length - 1,
-                      });
-                      dispatch({
-                        type: "nameToEdit",
-                        payload: contactData.name,
-                      });
-                      dispatch({
-                        type: "addressToEdit",
-                        payload: contactData.address,
-                      });
-                      dispatch({
-                        type: "phoneToEdit",
-                        payload: contactData.phone,
-                      });
-                      dispatch({
-                        type: "emailToEdit",
-                        payload: contactData.email,
-                      });
-                    }}
-                  ></i>
+                  ></i> */}
+                    Edit
                   </button>
                   </Link>
                 </span>

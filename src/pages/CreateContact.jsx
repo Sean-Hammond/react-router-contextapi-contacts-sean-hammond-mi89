@@ -106,7 +106,7 @@ export const CreateContact = () => {
         className="btn btn-primary text-white"
         onClick={() => {
           newContactFullName != "" &&
-            newContactPhone != "" &&
+            newContactEmail != "" &&
             newContactPhone != "" &&
             newContactAddress != "" &&
             createContacts();

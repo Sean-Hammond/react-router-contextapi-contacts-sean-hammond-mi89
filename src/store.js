@@ -1,8 +1,8 @@
-export const initialStore=()=>{
-  return{
+export const initialStore = () => {
+  return {
     // fname: "Sean",
     // lname: "Hammond",
-    
+
     // Variables I made to try to work with editing and updating both on the same CreateContact page. This didn't work, and I'm making separate pages now, but deleting the variables now will likely mess up the code, so I'm leaving them here.
     indexOfContactToEdit: 0,
     nameToEdit: "",
@@ -12,32 +12,31 @@ export const initialStore=()=>{
 
     // Variables to work with the UpdateContact page:
     contactToEdit: {
-        name: "user5",
-        phone: "phone5",
-        email: "email5",
-        address: "address5",
-    }
+      name: "user5",
+      phone: "phone5",
+      email: "email5",
+      address: "address5",
+    },
 
     baseURL: "https://playground.4geeks.com/contact",
-
-  }
-}
+  };
+};
 
 export default function storeReducer(store, action = {}) {
   if (action.type == "set-fname") {
-    return{
+    return {
       ...store,
-      fname: action.payload
-    }
+      fname: action.payload,
+    };
   }
 
   if (action.type == "set-lname") {
-    return{
+    return {
       ...store,
-      lname: action.payload
-    }
+      lname: action.payload,
+    };
   }
-  
+
   // switch(action.type){
   //   case 'add_task':
 
@@ -49,5 +48,5 @@ export default function storeReducer(store, action = {}) {
   //     };
   //   default:
   //     throw Error('Unknown action.');
-  // }    
+  // }
 }

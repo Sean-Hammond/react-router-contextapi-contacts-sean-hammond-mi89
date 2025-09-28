@@ -12,7 +12,8 @@ import { Home } from "./pages/Home";
 import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
 import { CreateContact } from "./pages/CreateContact";
-import UpdateContact from "./pages/UpdateContact";
+import { UpdateContact } from "./pages/UpdateContact";
+import Changecontact from "./pages/Changecontact";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +32,8 @@ export const router = createBrowserRouter(
       {/* Dynamic route for single items */}
       <Route path="/demo" element={<Demo />} />
       <Route path="/createcontact" element={<CreateContact />} />
-      <Route path="/updateContact" element={<UpdateContact />} />
+      <Route path="/updatecontact" element={<UpdateContact />} />
+      <Route path="/changecontact" element={<Changecontact />} />
     </Route>
   )
 );
