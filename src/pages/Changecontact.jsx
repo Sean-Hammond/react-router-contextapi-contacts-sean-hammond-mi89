@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import { Link } from "react-router-dom";
 
 const Changecontact = () => {
   const { store, dispatch } = useGlobalReducer();
@@ -9,19 +10,22 @@ const Changecontact = () => {
   const [email, setEmail] = useState(store.contactToChange.email);
 
   const putContacts = async (contact_id) => {
-    const response = await fetch(store.baseURL + "/agendas/sean-hammond/contacts/" + contact_id, {
-      method: "PUT",
-      body: JSON.stringify({
+    const response = await fetch(
+      store.baseURL + "/agendas/sean-hammond/contacts/" + contact_id,
+      {
+        method: "PUT",
+        body: JSON.stringify({
           id: contact_id,
           name,
           phone,
           email,
           address,
         }), // the variable dataToSend can be a 'string' or an {object} that comes from somewhere else in our application
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     if (response.ok) {
       const data = await response.json();
       return data;
@@ -96,6 +100,12 @@ const Changecontact = () => {
         }}
       >
         Save contact
+      </button>
+
+      <button className="btn btn-info btn">
+        <Link to="/">
+          <i class="fa-solid fa-hand-point-left"></i> Back to contact list
+        </Link>
       </button>
     </div>
   );
