@@ -7,6 +7,33 @@ const Changecontact = () => {
   const [address, setAddress] = useState(store.contactToChange.address);
   const [phone, setPhone] = useState(store.contactToChange.phone);
   const [email, setEmail] = useState(store.contactToChange.email);
+
+  const putContacts = async (contact_id) => {
+    const response = await fetch(store.baseURL + "/agendas/sean-hammond/contacts/" + contact_id, {
+      method: "PUT",
+      body: JSON.stringify({
+          id: contact_id,
+          name,
+          phone,
+          email,
+          address,
+        }), // the variable dataToSend can be a 'string' or an {object} that comes from somewhere else in our application
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    } else {
+      console.log("error: ", response.status, response.statusText);
+      /* Handle the error returned by the HTTP request */
+      return {
+        error: { status: response.status, statusText: response.statusText },
+      };
+    }
+  };
+
   return (
     <div className="container">
       <h1>Change contact info</h1>
@@ -23,7 +50,7 @@ const Changecontact = () => {
       />
       <br />
 
-      <label for="name">Address</label>
+      <label for="address">Address</label>
       <br />
       <input
         id="address"
@@ -35,7 +62,7 @@ const Changecontact = () => {
       />
       <br />
 
-      <label for="name">Phone</label>
+      <label for="phone">Phone</label>
       <br />
       <input
         id="phone"
@@ -47,7 +74,7 @@ const Changecontact = () => {
       />
       <br />
 
-      <label for="name">Email</label>
+      <label for="email">Email</label>
       <br />
       <input
         id="email"
@@ -57,6 +84,19 @@ const Changecontact = () => {
         value={email}
         size={50}
       />
+
+      <button
+        className="btn btn-primary text-white"
+        onClick={() => {
+          // name != "" &&
+          //   email != "" &&
+          //   phone != "" &&
+          //   address != "" &&
+          putContacts(store.contactToChange.id);
+        }}
+      >
+        Save contact
+      </button>
     </div>
   );
 };

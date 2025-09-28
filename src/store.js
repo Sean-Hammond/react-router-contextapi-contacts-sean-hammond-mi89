@@ -52,8 +52,6 @@ export default function storeReducer(store, action = {}) {
     };
   }
 
-  //no change intended except clarification to my last commit message
-
   // Code found from another website just to test out and help me learn:
   // const reducer = (state, action) => {
   //   switch (action.type) {
