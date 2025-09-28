@@ -20,10 +20,10 @@ export const initialStore = () => {
 
     //Variable for Changecontact page:
     contactToChange: {
-      "name": "Sean",
-      "phone": "999",
-      "email": "eee",
-      "address": "aaa",
+      name: "Sean",
+      phone: "999",
+      email: "eee",
+      address: "aaa",
     },
 
     baseURL: "https://playground.4geeks.com/contact",
@@ -44,6 +44,23 @@ export default function storeReducer(store, action = {}) {
       lname: action.payload,
     };
   }
+
+  if (action.type == "set-contactToChange") {
+    return {
+      ...store,
+      contactToChange: action.payload,
+    };
+  }
+
+  // Code found from another website just to test out and help me learn:
+  // const reducer = (state, action) => {
+  //   switch (action.type) {
+  //     case "set-contactToChange":
+  //       return { ...state, contactToChange: action.payload };
+  //     default:
+  //       return state;
+  //   }
+  // };
 
   // switch(action.type){
   //   case 'add_task':

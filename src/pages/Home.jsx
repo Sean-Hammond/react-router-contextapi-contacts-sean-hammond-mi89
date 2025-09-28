@@ -115,11 +115,17 @@ export const Home = () => {
                 </span>
                 <span className="col-1">
                   <Link to="/changecontact">
-                    <button className="transparentButton">
+                    <button className="transparentButton"
+                    onClick={()=>{
+                      dispatch({
+                        type: "set-contactToChange",
+                        payload: contactData
+                      })
+                    }}
+                    >
                       <i className="fa-solid fa-pencil editIcon"></i>
                     </button>
                   </Link>
-                  
                 </span>
                 <span className="col-1">
                   <button className="transparentButton">

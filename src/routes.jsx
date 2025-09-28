@@ -1,7 +1,5 @@
 // Import necessary components and functions from react-router-dom.
 
-// Route route route to the home page, if you forget it's a shame! Ha ha ha!
-
 import {
   createBrowserRouter,
   createRoutesFromElements,
