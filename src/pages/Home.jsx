@@ -18,7 +18,7 @@ export const Home = () => {
     },
   ]);
 
-  const profilePhotos = ["https://upload.wikimedia.org/wikipedia/commons/7/72/William_Shatner_Star_Trek.JPG", "https://upload.wikimedia.org/wikipedia/en/8/8e/Patrick_Steward_as_Jean-Luc_Picard_in_1996%27s_Star_Trek_First_Contact.jpg", "https://upload.wikimedia.org/wikipedia/en/6/60/Mulder2016.png"]
+  const profilePhotos = ["https://upload.wikimedia.org/wikipedia/commons/7/72/William_Shatner_Star_Trek.JPG", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Leonard_Nimoy_as_Spock_1967.jpg", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Rod_Serling_1959.JPG", "https://upload.wikimedia.org/wikipedia/commons/1/13/Babe_Ruth2.jpg"]
 
   const createAgenda = () => {
     let options = {
@@ -112,7 +112,7 @@ export const Home = () => {
             <li key={contactData.id} className="row">
               <div className="col-xl-2">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/72/William_Shatner_Star_Trek.JPG"
+                  src={profilePhotos[Math.floor(Math.random() * profilePhotos.length)]}
                   alt="image of person for this contact"
                 />
               </div>
