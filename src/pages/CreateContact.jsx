@@ -39,7 +39,7 @@ export const CreateContact = () => {
       <h1>Add a new contact</h1>
 
       {/* Name: */}
-      <label for="fullname">Full Name</label>
+      <label htmlFor="fullname">Full Name</label>
       <br />
       <input
         value={newContactFullName}
@@ -56,7 +56,7 @@ export const CreateContact = () => {
       <br />
 
       {/* Email: */}
-      <label for="email">Email</label>
+      <label htmlFor="email">Email</label>
       <br />
       <input
         value={newContactEmail}
@@ -73,7 +73,7 @@ export const CreateContact = () => {
       <br />
 
       {/* Phone: */}
-      <label for="phone">Phone</label>
+      <label htmlFor="phone">Phone</label>
       <br />
       <input
         value={newContactPhone}
@@ -90,13 +90,13 @@ export const CreateContact = () => {
       <br />
 
       {/* Address: */}
-      <label for="fullname">Address</label>
+      <label htmlFor="address">Address</label>
       <br />
       <input
         value={newContactAddress}
         type="text"
-        name="fullname"
-        id="fullname"
+        name="address"
+        id="address"
         placeholder="Mailing Address"
         size="50"
         required

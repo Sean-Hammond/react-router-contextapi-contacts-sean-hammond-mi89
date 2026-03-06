@@ -1,6 +1,6 @@
 export const initialStore = () => {
   return {
-    // Variable to work with the UpdateContact page:
+    // Variable to work with the UpdateContact page (PAGE NO LONGER IN USE):
     contactToEdit: {
       name: "user5",
       phone: "phone5",

@@ -10,13 +10,15 @@ export const Home = () => {
   // const [user, setUser] = useState("Sean");
   const [contactList, setContactList] = useState([
     {
-      name: "Sean Hammond",
-      phone: "123-456-7980",
-      email: "e@mail.com",
-      address: "1600 Penn Road",
+      name: "Jean-Luc Picard",
+      phone: "NCC-1701-D",
+      email: "picard@tngmail.federation",
+      address: "Paris, France",
       id: 1,
     },
   ]);
+
+  const profilePhotos = ["https://upload.wikimedia.org/wikipedia/commons/7/72/William_Shatner_Star_Trek.JPG", "https://upload.wikimedia.org/wikipedia/en/8/8e/Patrick_Steward_as_Jean-Luc_Picard_in_1996%27s_Star_Trek_First_Contact.jpg", "https://upload.wikimedia.org/wikipedia/en/6/60/Mulder2016.png"]
 
   const createAgenda = () => {
     let options = {
@@ -66,7 +68,7 @@ export const Home = () => {
     };
     fetch(
       store.baseURL + "/agendas/sean-hammond/contacts/" + contactId,
-      options
+      options,
     )
       .then((response) => response.json())
       .then((data) => {
@@ -93,7 +95,7 @@ export const Home = () => {
       createAgenda();
       getContacts();
     },
-    [] // the sq.brackets make useEffect is triggered every time page loads
+    [], // the sq.brackets make useEffect is triggered every time page loads
   );
 
   return (
@@ -107,51 +109,61 @@ export const Home = () => {
       <ul>
         {contactList.map((contactData) => {
           return (
-            <li key={contactData.id}>
-              <h2 className="row">
-                <span className="col-10">
-                  <i className="fa-regular fa-circle-user"></i>
-                  {" " + contactData.name}
-                </span>
-                <span className="col-1">
-                  <Link to="/changecontact">
-                    <button className="transparentButton"
-                    onClick={()=>{
-                      dispatch({
-                        type: "set-contactToChange",
-                        payload: contactData
-                      })
-                    }}
-                    >
-                      <i className="fa-solid fa-pencil editIcon"></i>
+            <li key={contactData.id} className="row">
+              <div className="col-xl-2">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/72/William_Shatner_Star_Trek.JPG"
+                  alt="image of person for this contact"
+                />
+              </div>
+
+              <div className="col-xl-10">
+                <h2 className="row">
+                  <span className="col-10">
+                    <i className="fa-regular fa-circle-user"></i>
+                    {" " + contactData.name}
+                  </span>
+                  <span className="col-1">
+                    <Link to="/changecontact">
+                      <button
+                        className="transparentButton"
+                        onClick={() => {
+                          dispatch({
+                            type: "set-contactToChange",
+                            payload: contactData,
+                          });
+                        }}
+                      >
+                        <i className="fa-solid fa-pencil editIcon"></i>
+                      </button>
+                    </Link>
+                  </span>
+                  <span className="col-1">
+                    <button className="transparentButton">
+                      <i
+                        className="fa-solid fa-trash-can editIcon"
+                        onClick={() => {
+                          contactList.length == 1 && createDemoContacts();
+                          deleteContact(contactData.id);
+                          window.location.reload();
+                        }}
+                      ></i>
                     </button>
-                  </Link>
-                </span>
-                <span className="col-1">
-                  <button className="transparentButton">
-                    <i
-                      className="fa-solid fa-trash-can editIcon"
-                      onClick={() => {
-                        contactList.length == 1 && createDemoContacts();
-                        deleteContact(contactData.id);
-                        window.location.reload();
-                      }}
-                    ></i>
-                  </button>
-                </span>
-              </h2>
-              <h3>
-                <i className="fa-solid fa-location-dot"></i>
-                {" " + contactData.address}
-              </h3>
-              <h3>
-                <i className="fa-solid fa-phone"></i>
-                {" " + contactData.phone}
-              </h3>
-              <h3>
-                <i className="fa-solid fa-envelope"></i>
-                {" " + contactData.email}
-              </h3>
+                  </span>
+                </h2>
+                <h3>
+                  <i className="fa-solid fa-location-dot"></i>
+                  {" " + contactData.address}
+                </h3>
+                <h3>
+                  <i className="fa-solid fa-phone"></i>
+                  {" " + contactData.phone}
+                </h3>
+                <h3>
+                  <i className="fa-solid fa-envelope"></i>
+                  {" " + contactData.email}
+                </h3>
+              </div>
             </li>
           );
         })}

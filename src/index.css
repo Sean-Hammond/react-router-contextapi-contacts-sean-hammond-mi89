@@ -14,6 +14,13 @@ li {
   padding: 15px 50px 15px 50px;
 }
 
+img {
+  max-width: 10rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
 h3 {
   font-size: medium;
 }

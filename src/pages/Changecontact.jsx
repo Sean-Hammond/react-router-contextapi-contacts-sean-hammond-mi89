@@ -42,7 +42,7 @@ const Changecontact = () => {
     <div className="container">
       <h1>Change contact info</h1>
 
-      <label for="name">Full Name</label>
+      <label htmlFor="name">Full Name</label>
       <br />
       <input
         id="name"
@@ -54,7 +54,7 @@ const Changecontact = () => {
       />
       <br />
 
-      <label for="address">Address</label>
+      <label htmlFor="address">Address</label>
       <br />
       <input
         id="address"
@@ -66,7 +66,7 @@ const Changecontact = () => {
       />
       <br />
 
-      <label for="phone">Phone</label>
+      <label htmlFor="phone">Phone</label>
       <br />
       <input
         id="phone"
@@ -78,7 +78,7 @@ const Changecontact = () => {
       />
       <br />
 
-      <label for="email">Email</label>
+      <label htmlFor="email">Email</label>
       <br />
       <input
         id="email"
@@ -88,6 +88,7 @@ const Changecontact = () => {
         value={email}
         size={50}
       />
+      <br />
 
       <button
         className="btn btn-primary text-white"

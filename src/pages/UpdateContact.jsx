@@ -1,3 +1,5 @@
+// I don't believe I'm using this page anymore. This functionality has been moved to ChangeContact.jsx
+
 import React, { useState } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 
