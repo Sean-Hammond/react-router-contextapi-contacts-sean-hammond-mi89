@@ -1,6 +1,3 @@
-// Prettier extension adds trailing commas in objects. I did not add these deliberately.
-
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -18,7 +15,7 @@ export const Home = () => {
     },
   ]);
 
-  const profilePhotos = ["https://upload.wikimedia.org/wikipedia/commons/7/72/William_Shatner_Star_Trek.JPG", "https://upload.wikimedia.org/wikipedia/commons/f/fa/Leonard_Nimoy_as_Spock_1967.jpg", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Rod_Serling_1959.JPG", "https://upload.wikimedia.org/wikipedia/commons/1/13/Babe_Ruth2.jpg"]
+  const profilePhotos = ["https://openclipart.org/download/122107/defaultprofile.svg", "https://openclipart.org/download/279689/Button---Happy.svg", "https://openclipart.org/download/242499/1456705995.svg", "https://openclipart.org/download/179156/heartusa.svg"]
 
   const createAgenda = () => {
     let options = {
@@ -77,25 +74,12 @@ export const Home = () => {
       });
   };
 
-  // const putContacts = () => {
-  //   let options = {
-  //     method: "PUT",
-  //     headers: { "content-type": "application/json" },
-  //     body: JSON.stringify({
-  //       name: "user5",
-  //       phone: "phone5",
-  //       email: "email5",
-  //       address: "address5",
-  //     }),
-  //   };
-  // };
-
   useEffect(
     () => {
       createAgenda();
       getContacts();
     },
-    [], // the sq.brackets make useEffect is triggered every time page loads
+    [], // the sq.brackets make useEffect triggered every time page loads
   );
 
   return (
@@ -168,35 +152,6 @@ export const Home = () => {
           );
         })}
       </ul>
-
-      {/* Tutorial on dispatch function: */}
-      {/* <div className="m-3">
-        <button
-          className="btn btn-primary"
-          onClick={() => {
-            dispatch({
-              type: "set-fname",
-              payload: "Alex",
-            });
-          }}
-        >
-          {store.fname}
-        </button>
-      </div>
-
-      <div className="m-3">
-        <button
-          className="btn btn-primary"
-          onClick={() => {
-            dispatch({
-              type: "set-lname",
-              payload: "Ayala",
-            });
-          }}
-        >
-          {store.lname}
-        </button>
-      </div> */}
     </div>
   );
 };

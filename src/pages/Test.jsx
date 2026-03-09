@@ -33,3 +33,47 @@
     // addressToEdit: "",
     // phoneToEdit: "",
     // emailToEdit: "",
+
+// Code moved out of Home.jsx
+  // const putContacts = () => {
+    //   let options = {
+    //     method: "PUT",
+    //     headers: { "content-type": "application/json" },
+    //     body: JSON.stringify({
+    //       name: "user5",
+    //       phone: "phone5",
+    //       email: "email5",
+    //       address: "address5",
+    //     }),
+    //   };
+    // };
+
+// taken from right before last closing </div> tag in Home.jsx:
+  {/* Tutorial on dispatch function: */}
+      {/* <div className="m-3">
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            dispatch({
+              type: "set-fname",
+              payload: "Alex",
+            });
+          }}
+        >
+          {store.fname}
+        </button>
+      </div>
+
+      <div className="m-3">
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            dispatch({
+              type: "set-lname",
+              payload: "Ayala",
+            });
+          }}
+        >
+          {store.lname}
+        </button>
+      </div> */}

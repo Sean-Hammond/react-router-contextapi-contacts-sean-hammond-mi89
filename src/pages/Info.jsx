@@ -16,7 +16,7 @@ export const Info = () => {
         >
           this template
         </a>{" "}
-        <i className="fa-solid fa-file"></i> by Alejandro Sanchez and 4Geeks Academy. Contact list coded by Sean Hammond with help from Alex Castanier, Alexander Ayala-Palacin, and Thomas Brito Bronfield from 4Geeks Acdademy.
+        <i className="fa-solid fa-file"></i> by Alejandro Sanchez and 4Geeks Academy. Contact list coded by Sean Hammond with help from Ryan Castanier, Alexander Ayala-Palacin, and Thomas Brito-Bronfield from 4Geeks Acdademy. Creative Commons images used: https://en.wikipedia.org/wiki/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg, 
       </p>
       <Link to="/">
         <button className="btn btn-primary">Back home</button>
